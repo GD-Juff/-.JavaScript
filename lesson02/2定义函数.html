@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function abs(x){
+            console.log("x-->"+x);
+            for(var i =0;i<arguments.length;i++){
+                console.log(arguments[i])
+            }
+
+            if(typeof x!="number"){
+            throw "not a Number!"
+            }
+            if(x>=0){
+                return x;
+            }else{
+                console.log(x+"的绝对值：");
+                return -x;
+
+            }
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

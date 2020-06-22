@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="js">JavaScript</p>
+
+<div id="list">
+    <p id='se'>JavaSE</p>
+    <p id='ee'>JavaEE</p>
+    <p id='me'>JavaME</p>
+</div>
+<script>
+    var js = document.getElementById("js");
+    var list = document.getElementById("list");
+
+    //通过js创建新节点
+    var newP = document.createElement('p');
+    newP.id = "newP";
+    newP.innerText = "hello,Juff";
+    newP.style.color = "green"
+    list.appendChild(newP);
+
+    //插件一个标签节点
+    var myScript = document.createElement("script");
+    myScript.setAttribute("type", 'text/javaScript')
+
+
+    let myStyle = document.createElement('style')
+    myStyle.setAttribute('type', 'text/css')
+    myStyle.innerHTML = 'body{background-color:green}'
+    document.getElementsByTagName('head')[0].appendChild(myStyle)
+
+    let ee = document.getElementById('ee')
+    var js = document.getElementById('js')
+    let lisr = document.getElementById('list')
+
+    list.insertBefore(js, ee)
+</script>
+</body>
+</html>

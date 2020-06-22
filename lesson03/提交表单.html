@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://cdn.bootcss.com/blueimp-md5/2.10.0/js/md5.min.js"></script>
+</head>
+<body>
+<form action="https://www.bilibili.com/" method="post" onsubmit="return aaa()">
+    <p>
+        <span>用户名：</span>
+        <input type="text" id="userName" name="userName">
+    </p>
+    <p>
+        <span>密码：</span>
+        <!--        <input type="password" id="password" name="password">-->
+        <input type="password" id="input-pwd">
+    </p>
+    <input type="hidden" id="md5-pwd" name="pwd">
+    <button type="submit" onclick="aaa()">提交</button>
+</form>
+<script>
+    function aaa() {
+        let uName = document.getElementById('userName')
+        // let pwd = document.getElementById('password')
+        let pwd = document.getElementById('input-pwd')
+        let md5pwd = document.getElementById('md5-pwd')
+
+        md5pwd.value=md5(pwd.value)
+        return true
+
+        // console.log(uName.value)
+        // pwd.value = '*****'
+        // console.log(pwd.value)
+
+        // //MD5 算法(加长)
+        // pwd.value = md5(pwd.value)
+        // console.log(pwd.value)
+    }
+</script>
+</body>
+</html>

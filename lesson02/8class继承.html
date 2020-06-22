@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        // function Student(name) {
+        //     this.name=name;
+        // }
+        // Student.prototype.hello=function () {
+        //     alert("hello")
+        // }//以前的写法
+
+        class Student{
+            constructor(name) {
+                this.name=name;
+            }
+            hello(){
+                alert(this.name+'says:"hello"')
+            }
+        }
+        class XiaoStudent extends Student{
+            constructor(name,score) {
+                super(name);
+                this.score=score;
+            }
+           MyScore(){
+                alert(this.name+'的分数：'+this.score)
+            }
+        }
+            var xiaogan=new Student("xiaogan")
+            var xiaofan = new XiaoStudent("xiaofan",88)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

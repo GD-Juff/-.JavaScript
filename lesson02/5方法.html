@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        // var juff = {
+        //     name: '俊锋',
+        //     birth: 1998,
+        //     age: function () {
+        //         var now = new Date().getFullYear();
+        //         return now - this.birth;
+        //     }
+
+        // }
+
+        var juff = {
+            name: '俊锋',
+            birth: 1998,
+            age: getAge
+        }
+
+        function getAge() {
+            var now = new Date().getFullYear();
+            return now - this.birth;
+        }
+
+        // console.log(juff.age())
+        getAge.apply(juff, [])
+    </script>
+</head>
+<body>
+
+</body>
+</html>

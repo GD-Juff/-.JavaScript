@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        var bird={
+            fly:function () {
+                console.log(this.name+" is flying")
+            }
+        }
+
+        var xiaomin={
+            name:"小明"
+        }
+        var xiaohong={
+            name:"小红"
+        }
+        xiaomin.__proto__ = bird
+        xiaohong.__proto__ = bird
+    </script>
+</head>
+<body>
+
+</body>
+</html>
